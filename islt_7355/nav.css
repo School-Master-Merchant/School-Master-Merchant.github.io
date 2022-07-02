@@ -1,9 +1,11 @@
 
 
- body
+ body 
+ 
+ On your nav.css the version I could access
  
      .navbar {
-        background-color: #ffffff;
+        background-color: #397f91;
         
         list-style-type: none;
         text-align:center;
