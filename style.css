@@ -8,6 +8,16 @@ body
      display: 0;
    background-color: #ff9999;}
 
+   p::first-letter {
+    color: #666666;
+    font-size: xx-large;}
+
+    div.a {
+      text-indent: 50px;
+    }
+
+    
+    
 
 
 
