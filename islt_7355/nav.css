@@ -44,6 +44,7 @@ ul {
       position: relative;
    }
    
+   
 
 
 
@@ -70,7 +71,7 @@ nav ul li ul li a {
 }
 
 nav ul li ul li a:hover {
-   background-color: rgb(179, 224, 245);
+   background-color: #999999;
 } 
 
 
@@ -80,7 +81,7 @@ On your nav.css the version I could access
  
  
 .navbar {
-   background-color: #397f91;
+   background-color: #999999;
    
    list-style-type: none;
    text-align:center;
@@ -100,7 +101,7 @@ On your nav.css the version I could access
 }
 
 .navbar > li> a:hover{
-   color:#666666;
+   color:#ff9999;
 
     text-align: center;
     padding: 20px 0 20px 0;
@@ -117,6 +118,6 @@ On your nav.css the version I could access
 }
 
 .navbar > li > a:hover {
-    color: #666666
+    color: #ff9999
 }
 
