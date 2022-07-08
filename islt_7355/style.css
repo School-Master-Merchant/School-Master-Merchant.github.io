@@ -25,31 +25,73 @@ body
 
 
     /************Grid Style*******/
-    
-    .title {
-      grid-area: title;
-    }
 
-    .sidebar {
-        grid-area: sidebar;
-      }
-    
-      .sidebar2 {
-        grid-area: sidebar2;
-      }
-    
-      .content {
-        grid-area: content;
-      }
-    
-      .header {
-        grid-area: header;
-      }
-    
-      .footer {
-        grid-area: footer;
-      }
-    
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-gap: 10px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header"
+     "Navigation Navigation"
+     "Sidebar content sidebar2"
+     "footer footer";
+  }
+
+  /*header styling*/
+  .header {grid-area: header;
+  color:white;
+  text-size-adjust: 70%;
+  text-align: center;
+}
+
+
+.box {
+  background-color: #ff9999;
+  color: #999;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%; 
+}
+
+
+
+.navigation 
+{grid-area: navigation;
+background:#999;
+padding: 15px 15px 15px;
+font-size: 150%;
+text-align: center;}
+
+.sidebar {grid-area: image;
+padding: 5%;}
+
+.content
+ {grid-area: content;
+margin-left: 2em;
+font-size: 18px;
+background-color: #ff9999;
+color: #999; }
+
+
+.sidebar2 
+{grid-area: sidebar;
+text-align: center;
+background-color: #ff9999;
+  color: #999;}
+
+  .footer
+  {grid-area: footer;
+  background-color: #ff9999;
+  color: #999;
+  padding: 1%;
+  margin:auto;
+  text-align: center; }
+
+
+
       .wrapper {
         background-color: #ff9999;
         color: #999;
@@ -59,12 +101,13 @@ body
         display: grid;
         grid-gap: 1em;
         grid-template-areas:
-         "title"
          "header"
+         "navigation"
          "sidebar"
          "content"
          "sidebar2"
          "footer"
+
       }
     
       @media only screen and (min-width: 500px)  {
@@ -72,9 +115,10 @@ body
     
         grid-template-columns: 20% auto;
         grid-template-areas:
+      
         "header   header"
-        "sidebar  content"
-        "sidebar2 sidebar2"
+        "navigation navigation"
+        "sidebar content  sidebar2"
         "footer   footer";
       }
       }
@@ -84,37 +128,15 @@ body
           grid-gap: 20px;
           grid-template-columns: 120px auto 120px;
           grid-template-areas:
+          
           "header  header  header"
+          "navigation navigation navigation"
           "sidebar content sidebar2"
           "footer  footer  footer";
           max-width: 600px;
         }
       }
     
-    .box {
-      background-color: #ff9999;
-      color: #999;
-      border-radius: 5px;
-      padding: 10px;
-      font-size: 150%; 
-    }
-
-    .title {
-      background-color: white;}
-      
     
-    .header,
-    .footer {
-      background-color: #ff9999;
-      color: #999
-    }
-    
-    .sidebar2 {
-      background-color: #ff9999;
-      color: #999;
-    }
-
-
-
 
 
