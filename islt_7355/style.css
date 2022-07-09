@@ -34,10 +34,10 @@ body
     height: 720px;
     grid-auto-flow: row;
     grid-template-areas: 
-    "Header Header"
-     "Navigation Navigation"
+    "Header Header Header"
+     "Navigation Navigation Navigation"
      "Sidebar content sidebar2"
-     "footer footer";
+     "footer footer footer";
   }
 
   /*header styling*/
@@ -116,10 +116,10 @@ background-color: #ff9999;
         grid-template-columns: 20% auto;
         grid-template-areas:
       
-        "header   header"
-        "navigation navigation"
-        "sidebar content  sidebar2"
-        "footer   footer";
+        "header header  header"
+        "navigation navigation navigation"
+        "sidebar content sidebar2"
+        "footer footer  footer";
       }
       }
     
