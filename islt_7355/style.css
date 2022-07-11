@@ -48,13 +48,7 @@ body
 }
 
 
-.box {
-  background-color: #ff9999;
-  color: #999;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 150%; 
-}
+
 
 
 
@@ -91,52 +85,90 @@ background-color: #ff9999;
   text-align: center; }
 
 
-
-      .wrapper {
-        background-color: #ff9999;
-        color: #999;
-      }
-    
-      .wrapper {
-        display: grid;
-        grid-gap: 1em;
-        grid-template-areas:
-         "header"
-         "navigation"
-         "sidebar"
-         "content"
-         "sidebar2"
-         "footer"
-
-      }
-    
-      @media only screen and (min-width: 500px)  {
-      .wrapper {
-    
-        grid-template-columns: 20% auto;
-        grid-template-areas:
+  .Reflection  {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows:15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+     "Navigation Navigation"
+     "content content content"
+     "footer footer footer";
+  }
       
-        "header header  header"
-        "navigation navigation navigation"
-        "sidebar content sidebar2"
-        "footer footer  footer";
-      }
-      }
-    
-      @media only screen and (min-width: 600px)   {
-        .wrapper {
-          grid-gap: 20px;
-          grid-template-columns: 120px auto 120px;
-          grid-template-areas:
-          
-          "header  header  header"
-          "navigation navigation navigation"
-          "sidebar content sidebar2"
-          "footer  footer  footer";
-          max-width: 600px;
-        }
-      }
-    
+  .Projects-Spanish Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+      
+  .Projects-Music Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+  .Projects-Reading Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+       
+  .Home {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header"
+     "Navigation Navigation"
+     "content"
+     "footer footer footer";
+  }
     
 
+  .Contact {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header"
+     "Navigation Navigation"
+     "content"
+     "footer footer footer";
+  }
 
+  .About {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-gap: 10px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+     "Navigation Navigation Navigation"
+     "Sidebar content sidebar2"
+     "footer footer footer";
+  }

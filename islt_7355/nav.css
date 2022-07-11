@@ -1,3 +1,36 @@
+.menu {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   background-color: #999999;
+ }
+   nav ul li a {
+   display: block;
+   color: black;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+ }
+ 
+ /* Change the link color to pink on hover */
+ nav ul li a:hover {
+   background-color: #ff9999;
+ }
+
+ .dropdown {
+   position: absolute;
+   color:#333;
+   display: none;
+
+ }
+
+
+ nav ul li:hover ul {
+display: block;
+
+ }
+
 
 
 /*Hamburger Menu*/
@@ -7,19 +40,19 @@
 #hamnavigation {
    width: 100%;
    background:white;
-   
+
    /* Optional */
    position: sticky;
    top: 0;
  }
  
  /* (B) HORIZONTAL MENU ITEMS */
- li {display: inline;
+ nav ul li {display: inline;
      text-align: center;
      padding: 10px 10px 10px 10px;
    }
- #hamitems { display: flex; }
- #hamitems a {
+ .menu { display: flex; }
+ .menu  {
    flex-grow: 1;
    flex-basis: 0;
    padding: 10px;
@@ -27,25 +60,27 @@
    text-decoration: none;
    text-align: center;
  }
- #hamitems a:hover { background: #401408; }
+ .menu a:hover { background: #401408; }
  
  /* (C) HIDE HAMBURGER */
- #hamnav label, #hamburger { display: none; }
+ #hamnavigation label, #hamburger { display: none; }
  
  /* [ON SMALL SCREENS] */
  @media screen and (max-width: 768px){
    /* (A) BREAK INTO VERTICAL MENU */
-   #hamitems a {
+   .menu a {
      box-sizing: border-box;
      display: block;
      width: 100%;
      border-top: 1px solid #333;
    }
- 
+ .dropdown
+ {display: none;}
+
    /* (B) SHOW HAMBURGER ICON */
-   #hamnav label {
+   #hamnavigation label {
      display: inline-block;
-     color: rgb(23, 0, 128);
+     color:#999999;
      background: #a0208b;
      font-style: normal;
      font-size: 1.2em;
@@ -53,8 +88,8 @@
    }
  
    /* (C) TOGGLE SHOW/HIDE MENU */
-   #hamitems { display: none; }
-   #hamnav input:checked ~ #hamitems { display: block; }
+   .menu { display: none; }
+   #hamnavigation input:checked ~ .menu { display: block; }
  }
  
  /* [DOES NOT MATTER] */
@@ -67,131 +102,14 @@
 
 
 
-
-
-
-
-
-/*index page? This was my first code in css*/
-ul {
-   list-style-type: none;
-   margin: 0;
-   padding: 0;
-   overflow: hidden;
-   background-color: #999999;
- }
- 
- li {
-   float: left;
- }
- 
- li a {
-   display: block;
-   color: black;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
- }
- 
- /* Change the link color to pink on hover */
- li a:hover {
-   background-color: #ff9999;
- }
-
  
 
-    /* Color, size and location of all parts of the navigation*/
-    .navbar {
-      width: 100%;
-      height: 50px;
-      
-     }
+ 
    
-     nav ul  {
-      float:left;
-      }
-   
-   nav ul li {
-      float: left;
-      list-style:none;
-      position: relative;
-   }
+    
    
 
 
 
 
-   /* dropdown styling*/
-nav ul li ul{
-   display: none;
-   position: absolute;
-   
-   padding: 10px; 
-   border-radius: 0px 0px 4px 4px;
-}
-/* to show dropsdown when hovering*/
-nav ul li:hover ul{
-   display: block;  
-}
-
-nav ul li ul li {
-   width: 100px;
-   text-align: center;
-   border-radius: 4px;      
-}
-nav ul li ul li a {
-   padding: 0px 12px;
-}
-
-nav ul li ul li a:hover {
-   background-color: #999999;
-} 
-
-
-
-
-On your nav.css the version I could access
- 
- 
-.navbar {
-   background-color: #999999;
-   
-   list-style-type: none;
-   text-align:center;
-   padding: 20px 0 20px 0;
-   display: inline-block;
-}
-
-.navbar > li {
   
-   padding-right: 50px;
-
-}
-
-.navbar > a {
-   text-decoration:none;
-   color: #666666;
-}
-
-.navbar > li> a:hover{
-   color:#ff9999;
-
-    text-align: center;
-    padding: 20px 0 20px 0;
-}
-
-.navbar > li {
-    display: inline-block;
-    padding-right: 50px;
-}
-
-.navbar > li > a {
-    text-decoration: none;
-    color: #666666;
-}
-
-.navbar > li > a:hover {
-    color: #ff9999
-}
-
-
