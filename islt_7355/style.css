@@ -3,7 +3,7 @@
   font-family:Yantramanav, sans-serif;
 }
 
-.top-header {
+.header {
   width:100%;
   max-width:96px;
   font-family: Yantramanav, sans-serif;
@@ -12,6 +12,67 @@
   margin:40px auto;
   text-align:center;
 }
+
+/*Pring stylesheet */
+@media screen {
+      *{ 
+   background: transparent important!;
+   color: #000 important!; 
+   box-shadow: none important!;
+   text-shadow: none important!;
+}
+/*content that doesn't need printed*/
+
+.navigation,
+.Sidebar,
+.sidebar2,
+img {
+     display: none;}
+}
+
+/*So borders won't show from header when printed*/
+.main-header {
+
+  margin-bottom: 0;
+  border: none;
+  text-align: center;
+}
+
+/*places href attribute to right of link*/
+/*use the begins with sub string matching attribute ^*/
+a [href^="Resume:"]::after {
+  content: " ["attr(href)"]";
+  color: blue;
+  }
+
+  /*for the printed margins*/
+  @page {
+    margin: .5cm;
+}
+
+/*First page will have a margin gap of 2cm on top*/
+@page: first {
+  margin-top: 2cm;
+}
+/*avoid a page break before Resume and footer*/
+Resume, footer {
+   page-break-after: avoid;
+}
+
+/*To avoid single words or stray lines (widows=before page break) & (orphans=before page break)*/
+p {
+   orphans: 3;
+   widows: 3;
+   font-size: 11pt;
+}
+
+
+
+
+
+
+
+  
 
 
 
