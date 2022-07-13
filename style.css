@@ -1,9 +1,113 @@
+
+ 
+ .content index page
+ {
+   width:600px;
+   height: 400px;
+   padding: 20px;
+   margin: 100px auto;
+   box-shadow: 0px 0px 10px 2px  10px solid black;
+   background: gray;
+   border:10px solid black;
+   
+ }
+
+ body{
+background-image: url(/images/background\ image.jpg);
+
+ }
+
+
+
+
+
+@font-face {
+  src: url(Fonts/Yantramanav,sans-serif.ttf);
+  font-family:Yantramanav, sans-serif;
+}
+
+.header {
+  width:100%;
+  max-width:96px;
+  font-family: Yantramanav, sans-serif;
+  color: #000;
+  text-shadow:#000;
+  margin:40px auto;
+  text-align:center;
+}
+
+/*Pring stylesheet */
+@media screen {
+      *{ 
+   background: transparent important!;
+   color: #000 important!; 
+   box-shadow: none important!;
+   text-shadow: none important!;
+}
+/*content that doesn't need printed*/
+
+.navigation,
+.Sidebar,
+.sidebar2,
+img {
+     display: none;}
+}
+
+/*So borders won't show from header when printed*/
+.main-header {
+
+  margin-bottom: 0;
+  border: none;
+  text-align: center;
+}
+
+/*places href attribute to right of link*/
+/*use the begins with sub string matching attribute ^*/
+a [href^="Resume:"]::after {
+  content: " ["attr(href)"]";
+  color: blue;
+  }
+
+  /*for the printed margins*/
+  @page {
+    margin: .5cm;
+}
+
+/*First page will have a margin gap of 2cm on top*/
+@page: first {
+  margin-top: 2cm;
+}
+/*avoid a page break before Resume and footer*/
+Resume, footer {
+   page-break-after: avoid;
+}
+
+/*To avoid single words or stray lines (widows=before page break) & (orphans=before page break)*/
+p {
+   orphans: 3;
+   widows: 3;
+   font-size: 11pt;
+}
+
+
+
+
+
+
+
+  
+
+
+
+
+
 h1 {color:#666666;}
 body
  {
     margin: 0;
     padding: 0;
-    font-family: Ariel, Helvetica, sans-serif;
+    font-family: Yantramanav;
+    color: black;
      border: 0;
      display: inline-block;
    background-color: #ff9999;}
@@ -17,19 +121,161 @@ body
     }
 
 
+    *{ box-sizing:border box;}
 
+    body {
+      margin: 40px;
+    }
+
+
+    /************Grid Style*******/
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-gap: 10px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+     "Navigation Navigation Navigation"
+     "Sidebar content sidebar2"
+     "footer footer footer";
+  }
+
+  /*header styling*/
+  .header {grid-area: header;
+  color:white;
+  text-size-adjust: 70%;
+  text-align: center;
+}
+
+
+
+
+
+
+.navigation 
+{grid-area: navigation;
+background:#999;
+padding: 15px 15px 15px;
+font-size: 150%;
+text-align: center;}
+
+.sidebar {grid-area: image;
+padding: 5%;}
+
+.content
+ {grid-area: content;
+margin-left: 2em;
+font-size: 18px;
+background-color: #ff9999;
+color: #999; }
+
+
+.sidebar2 
+{grid-area: sidebar;
+text-align: center;
+background-color: #ff9999;
+  color: #999;}
+
+  .footer
+  {grid-area: footer;
+  background-color: #ff9999;
+  color: #999;
+  padding: 1%;
+  margin:auto;
+  text-align: center; }
+
+
+  .Reflection  {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows:15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+     "Navigation Navigation"
+     "content content content"
+     "footer footer footer";
+  }
+      
+  .Projects-Spanish Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+      
+  .Projects-Music Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+  .Projects-Reading Lesson {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-template-areas: 
+    "Header Header Header"
+     "Sidebar  sidebar2"
+     "Content Content Content"
+     "footer footer footer";
+  }
+       
+  .Home {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header"
+     "Navigation Navigation"
+     "content"
+     "footer footer footer";
+  }
     
-    
+
+  .Contact {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 15% 15% 60% 10%;
+    grid-gap: 0px 0px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header"
+     "Navigation Navigation"
+     "content"
+     "footer footer footer";
+  }
+
+  .About {
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-columns: 5fr 20fr 5fr;
+    grid-gap: 10px;
+    height: 720px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+     "Navigation Navigation Navigation"
+     "Sidebar content sidebar2"
+     "footer footer footer";
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
+  
