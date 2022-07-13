@@ -1,3 +1,26 @@
+
+ 
+ .content index page
+ {
+   width:600px;
+   height: 400px;
+   padding: 20px;
+   margin: 100px auto;
+   box-shadow: 0px 0px 10px 2px  10px solid black;
+   background: gray;
+   border:10px solid black;
+   
+ }
+
+ body{
+background-image: url(/images/background\ image.jpg);
+
+ }
+
+
+
+
+
 @font-face {
   src: url(Fonts/Yantramanav,sans-serif.ttf);
   font-family:Yantramanav, sans-serif;
