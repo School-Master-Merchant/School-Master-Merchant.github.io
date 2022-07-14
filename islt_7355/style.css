@@ -1,6 +1,70 @@
+/*for mobile responsive video*/
 
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; 
+  height: 0;
+}
+.iframe-container iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*icons for email and phone in footer */
+#email {
+  height: 24px;
+  width: 24px;
+  padding-top: 8px;
+  transition: 0.5s linear;}
+
+  #phone {
+    height: 24px;
+    width: 24px;
+    padding-top: 8px;
+    transition: 0.5s linear;
+}
+
+.footer {
+  width: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  width: 80px ;
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  padding: 0px 0px 15px 0px;
+  text-align: center;
+  line-height: 20px;
+  background-image: url(images/footer/banner.jpg);
+}
+
+
+/*animation for footer icons*/
+.pic {
+  width: 50px;
+  height: 50px;
+}
+  .picbig {
+    position: absolute;
+    width: 0px;
+    -webkit-transition:width 0.3s linear 0s;
+    transition: width 0.3s linear 0s; z-index:10;
+  z-index: 10;}
+
+.pic hover + .picbig {
+   width: 200px;
+}
  
- .content index page
+
+/* image box for content*/
+.content index page
  {
    width:600px;
    height: 400px;
@@ -13,11 +77,9 @@
  }
 
  body{
-background-image: url(/images/background\ image.jpg);
+background-image: url(images/treble\ cleff\ with\ html\ tags.GIF);
 
  }
-
-
 
 
 
@@ -180,14 +242,7 @@ text-align: center;
 background-color: #ff9999;
   color: #999;}
 
-  .footer
-  {grid-area: footer;
-  background-color: #ff9999;
-  color: #999;
-  padding: 1%;
-  margin:auto;
-  text-align: center; }
-
+  
 
   .Reflection  {
     display: grid;
