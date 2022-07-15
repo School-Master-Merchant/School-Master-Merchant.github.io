@@ -60,7 +60,7 @@ display: block;
    text-decoration: none;
    text-align: center;
  }
- .menu a:hover { background: #401408; }
+ .menu a:hover { background: #ff9999; }
  
  /* (C) HIDE HAMBURGER */
  #hamnavigation label, #hamburger { display: none; }

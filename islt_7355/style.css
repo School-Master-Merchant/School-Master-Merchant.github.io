@@ -1,4 +1,40 @@
 
+@font-face {
+  src: url(Fonts/Yantramanav,sans-serif.ttf);
+  font-family:Yantramanav, sans-serif;
+}
+
+
+.header {
+  width:100%;
+  max-width:96px;
+  font-family: Yantramanav, sans-serif;
+  color: #000;
+  text-shadow:#000;
+  margin:40px auto;
+  text-align:center;
+}
+
+
+h1 {color:#666666;}
+.body
+ {
+  display: grid;
+    margin: 0;
+    padding: 0;
+    font-family: Yantramanav;
+    color: black;
+     border: 0;
+     display: inline-block;
+   background-color: #ff9999;}
+
+   p::first-letter {
+    color: #666666;
+    font-size: xx-large;}
+
+
+
+
 #Headshot { border-radius:50%;
             width:200px;}
 
@@ -61,6 +97,11 @@
   line-height: 20px;
   background-image: url ("images/footer banner.jpg");
   grid-area: footer;
+  display: grid_12;
+  
+  
+  
+    
 }
 
 
@@ -99,92 +140,8 @@
  
 
 
-@font-face {
-  src: url(Fonts/Yantramanav,sans-serif.ttf);
-  font-family:Yantramanav, sans-serif;
-}
-
-.header {
-  width:100%;
-  max-width:96px;
-  font-family: Yantramanav, sans-serif;
-  color: #000;
-  text-shadow:#000;
-  margin:40px auto;
-  text-align:center;
-}
-
-/*Pring stylesheet */
-@media screen {
-      *{ 
-   background: transparent important!;
-   color: #000 important!; 
-   box-shadow: none important!;
-   text-shadow: none important!;
-}
-/*content that doesn't need printed*/
-
-.navigation,
-.Sidebar,
-.sidebar2,
-img {
-     display: none;}
-}
-
-/*So borders won't show from header when printed*/
-.main-header {
-
-  margin-bottom: 0;
-  border: none;
-  text-align: center;
-}
-
-/*places href attribute to right of link*/
-/*use the begins with sub string matching attribute ^*/
-a [href^="Resume:"]::after {
-  content: " ["attr(href)"]";
-  color: blue;
-  }
-
-  /*for the printed margins*/
-  @page {
-    margin: .5cm;
-}
-
-/*First page will have a margin gap of 2cm on top*/
-@page: first {
-  margin-top: 2cm;
-}
-/*avoid a page break before Resume and footer*/
-Resume, footer {
-   page-break-after: avoid;
-}
-
-/*To avoid single words or stray lines (widows=before page break) & (orphans=before page break)*/
-p {
-   orphans: 3;
-   widows: 3;
-   font-size: 11pt;
-}
 
 
-
-
-h1 {color:#666666;}
-.body
- {
-  display: grid;
-    margin: 0;
-    padding: 0;
-    font-family: Yantramanav;
-    color: black;
-     border: 0;
-     display: inline-block;
-   background-color: #ff9999;}
-
-   p::first-letter {
-    color: #666666;
-    font-size: xx-large;}
 
     div.a {
       text-indent: 50px;
@@ -196,7 +153,6 @@ h1 {color:#666666;}
     body {
       margin: 40px;
     }
-
 
     /************Grid Style*******/
 
@@ -337,9 +293,59 @@ background-color: #ff9999;
      "footer footer footer";
   }
 
-.footer {
-  display: grid_12;
 
-
+/*Print stylesheet */
+@media screen {
+  *{ 
+background: transparent important!;
+color: #000 important!; 
+box-shadow: none important!;
+text-shadow: none important!;
 }
-  
+/*content that doesn't need printed*/
+
+.navigation,
+.Sidebar,
+.sidebar2,
+img {
+ display: none;}
+}
+
+/*So borders won't show from header when printed*/
+.main-header {
+
+margin-bottom: 0;
+border: none;
+text-align: center;
+}
+
+/*places href attribute to right of link*/
+/*use the begins with sub string matching attribute ^*/
+a [href^="Resume:"]::after {
+content: " ["attr(href)"]";
+color: blue;
+}
+
+/*for the printed margins*/
+@page {
+margin: .5cm;
+}
+
+/*First page will have a margin gap of 2cm on top*/
+@page: first {
+margin-top: 2cm;
+}
+/*avoid a page break before Resume and footer*/
+Resume, footer {
+page-break-after: avoid;
+}
+
+/*To avoid single words or stray lines (widows=before page break) & (orphans=before page break)*/
+p {
+orphans: 3;
+widows: 3;
+font-size: 11pt;
+}
+
+
+
