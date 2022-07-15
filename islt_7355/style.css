@@ -1,5 +1,6 @@
 
-#Headshot { border-radius:50%}
+#Headshot { border-radius:50%;
+            width:200px;}
 
 
 
@@ -29,6 +30,10 @@
   padding-top: 8px;
   transition: 0.5s linear;}
 
+  #email:hover {
+    transform: scale(1.25);
+  }
+
   #phone {
     height: 24px;
     width: 24px;
@@ -36,7 +41,11 @@
     transition: 0.5s linear;
 }
 
-.footer {
+#phone:hover{
+  transform: scale(1.25);
+}
+
+#footer {
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 30px;
@@ -47,7 +56,11 @@
   padding: 0px 0px 15px 0px;
   text-align: center;
   line-height: 20px;
-  background-image: url(images/footer/banner.jpg);
+  background-image: url ("images/footer banner.jpg");
+}
+
+footer {
+  grid-area: footer;
 }
 
 
@@ -81,11 +94,7 @@
    
  }
 
- body{
-background-image: url(images/treble\ cleff\ with\ html\ tags.GIF);
-
- }
-
+ 
 
 
 @font-face {
@@ -159,18 +168,10 @@ p {
 
 
 
-
-
-
-  
-
-
-
-
-
 h1 {color:#666666;}
 body
  {
+  display: grid;
     margin: 0;
     padding: 0;
     font-family: Yantramanav;
@@ -217,9 +218,6 @@ body
   text-size-adjust: 70%;
   text-align: center;
 }
-
-
-
 
 
 
