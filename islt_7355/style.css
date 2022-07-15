@@ -4,6 +4,9 @@
 
 
 
+
+
+
 /*for mobile responsive video*/
 
 
@@ -45,7 +48,7 @@
   transform: scale(1.25);
 }
 
-#footer {
+.footer {
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 30px;
@@ -57,11 +60,10 @@
   text-align: center;
   line-height: 20px;
   background-image: url ("images/footer banner.jpg");
-}
-
-footer {
   grid-area: footer;
 }
+
+
 
 
 /*animation for footer icons*/
@@ -169,7 +171,7 @@ p {
 
 
 h1 {color:#666666;}
-body
+.body
  {
   display: grid;
     margin: 0;
@@ -335,5 +337,9 @@ background-color: #ff9999;
      "footer footer footer";
   }
 
+.footer {
+  display: grid_12;
 
+
+}
   
